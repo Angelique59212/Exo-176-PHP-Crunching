@@ -2,7 +2,7 @@
 
 //1
 $string = file_get_contents("dictionnaire.txt", FILE_USE_INCLUDE_PATH);
-$dico = explode("\n", $string);
+$dico = explode("\r\n", $string);
 
 echo  "Le dictionnaire contient: " . count($dico). " mots<br>";
 
@@ -52,7 +52,7 @@ $top = $brut["feed"]["entry"]; # liste de films
 <?php
 //2
 foreach ($top as $key => $value) {
-    if ($value['im:name']['label'] === 'gravity') {
+    if ($value['im:name']['label'] === 'Gravity') {
         echo "La clé". $key ."contient la valeur gravity";
     }
 }
